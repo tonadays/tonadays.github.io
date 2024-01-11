@@ -77,3 +77,16 @@ a:hover,
 a:active {
     text-decoration: underline;
 }
+
+.content,
+body.content {
+    padding: 1rem;
+}
+
+.content> :first-child {
+    margin-top: 0;
+}
+
+.content> :last-child {
+    margin-bottom: 0;
+}
