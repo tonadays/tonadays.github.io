@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  workshop-test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out
@@ -19,11 +19,5 @@ jobs:
           ref: cache
           path: build
 
-      - name: Examine root
-        run: ls -a
-
-      - name: Enter build folder
-        run: cd build
-        
-      - name: Examine build
-        run: ls -a
+      - name: Examine folder structure
+        run: ls -a -R
