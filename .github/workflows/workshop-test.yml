@@ -1,0 +1,29 @@
+name: Workshop Test
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Create build folder
+        run: mkdir build
+
+      - name: Retrieve cache
+        uses: actions/checkout@v4
+        with:
+          ref: cache
+          path: build
+
+      - name: Examine root
+        run: ls -a
+
+      - name: Enter build folder
+        run: cd build
+        
+      - name: Examine build
+        run: ls -a
