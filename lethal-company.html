@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex">
+    <title id="title">Lethal Company Modding Guide</title>
+    <meta property="og:title" content="Lethal Company Modding Guide" />
+    <meta property="og:site_name" content="Tona Days" />
+    <meta name="description" content="A quick & simple guide to mod lethal company" />
+    <meta property="og:description" content="A quick & simple guide to mod lethal company" />
+    <meta content="https://tonadays.github.io/assets/games/lethal-company.png" property="og:image" />
+    <meta name="theme-color" content="#FE0701" />
+    <link rel="stylesheet" href="dark" id="theme">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./center-content.css" />
+    <style>
+        @font-face {
+            font-family: "IBM 3270";
+            src:
+                local("IBM 3270"),
+                url("./assets/fonts/3270/3270-Regular.woff") format("woff");
+        }
+
+        :root {
+            --background-color: #111;
+            --font-size: 22px;
+            --font: "IBM 3270", ui-monospace, Consolas, SFMono-Regular, "SF Mono", Menlo, "Liberation Mono", monospace;
+            --lethal-red: #FE0701;
+            --lethal-orange: #FE6600;
+            --text-color: #FD7536;
+            --anchor-color: #fd514e;
+            --visited-anchor-color: #fd4eab;
+        }
+
+        #header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+
+        #header h1 {
+            margin: 0;
+        }
+
+        .icon {
+            display: inline-block;
+            max-width: 2rem;
+            max-height: 2rem;
+            vertical-align: middle;
+        }
+
+        ol>li>div {
+            line-height: 2rem;
+        }
+
+        li {
+            margin: 2rem 0;
+        }
+
+        .example-button {
+            /* Ripped straight from r2modman */
+            background-color: rgb(31, 45, 59);
+            border-color: rgb(58, 73, 88);
+            border-width: 1px;
+            color: rgb(230, 239, 248);
+            /* cursor: pointer; */
+            user-select: none;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 1.5;
+            align-items: center;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            box-shadow: none;
+            font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+            /* Tweaked */
+            display: inline-block;
+            /* vertical-align: middle; */
+            margin-top: 6px;
+            margin-bottom: 6px;
+            font-size: 1rem;
+            height: 2rem;
+            padding-bottom: 0.1rem;
+            padding-left: 0.6em;
+            padding-right: 0.6em;
+            padding-top: 0.1rem;
+        }
+
+        .example-button.filled {
+            background-color: #3298dc;
+            color: #fff;
+        }
+        
+        .example-button.primary {
+            background-color: #2b5cb6;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="content">
+        <div id="header">
+            <img src="./assets/lethal/Lethal_Company_Header.png">
+            <h1>MODDING GUIDE</h1>
+        </div>
+        <ol>
+            <li>
+                <div>Download and install <a href="https://thunderstore.io/c/lethal-company/p/ebkr/r2modman/">r2modman</a> <a href="https://thunderstore.io/c/lethal-company/p/ebkr/r2modman/"><img class="icon" src="assets/lethal/r2modman.png"></a> or the <a href="https://www.overwolf.com/oneapp/Thunderstore-Thunderstore_Mod_Manager">thunderstore mod manager</a> <a href="https://www.overwolf.com/oneapp/Thunderstore-Thunderstore_Mod_Manager"><img class="icon" src="assets/lethal/thunderstore.png"></a></div>
+                <div>I recommend r2modman over thunderstore, as thunderstore's has ads.</div>
+            </li>
+            <li>
+                <div>Open your mod manager of choice and search for Lethal Company, Click <div class="example-button filled">Select game</div>, then <div class="example-button">Import / Update</div>
+                </div>
+            </li>
+            <li>
+                <div>If creating a new profile, click<br><div class="example-button filled">Import new profile</div>
+                <div>If updating an existing profile, click <div class="example-button primary">Update existing profile</div></div>
+                <div>Then, click <div class="example-button primary">From code</div>, and paste in our code:</div>
+                <div>018eb9f2-e01b-33b3-181a-ff2d355904b9</div>
+            </li>
+            <li>
+                <div>You may be given the option to name the profile, and your mod manager will download the mods. Select the profile with left click and load it by clicking <div class="example-button filled">Select profile</div></div>
+                <div>You can now launch the game using "Start modded" in the top left</div>
+            </li>
+        </ol>
+        <h2 style="text-align: center;">Launching from Steam</h2>
+        <ol>
+            <li>In your mod manager, load the profile, then open the config editor. Search or find BepInEx.cfg, select it, and click "Edit Config". Locate the Enabled option under Logging.Console and set it to false. If you used the code, it may already be set to false.</li>
+            <li>Next, click the "Help" tab on the left. Scroll all the way down until you find the section at the bottom with generated launch options. They should start with --doorstop-enable...</li>
+            <li>In your steam library, right click the game, click properties..., and then paste the launch options in the field for them</li>
+            <li>You may now close your mod manager and launch the game through steam as normal</li>
+        </ol>
+    </div>
+</body>
+
+</html>
